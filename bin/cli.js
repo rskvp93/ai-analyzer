@@ -6,11 +6,11 @@ const { analyzeEmail } = require('../index.js');
 
 async function main() {
     const args = process.argv.slice(2);
-    
-    if (args.length < 2 || args[0] !== 'analyze') {
-        console.error('Usage: npx ai-analyzer analyze <file_path>');
-        process.exit(1);
-    }
+        
+        if (args.length < 2 || args[0] !== 'analyze-phishing') {
+            console.error('Usage: npx ai-analyzer analyze-phishing <file_path>');
+            process.exit(1);
+        }
     
     const filePath = args[1];
     
