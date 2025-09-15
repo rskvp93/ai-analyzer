@@ -1,0 +1,22 @@
+{
+    "name": "ai-analyzer",
+    "version": "1.0.0",
+    "description": "AI-powered Analyzer for everything, including email, docs, pdf, etc.",
+    "main": "index.js",
+    "scripts": {
+      "test": "npx mocha test/**/*.test.js",
+      "build": "echo 'No build step required for this package'",
+      "prepublishOnly": "npm test",
+      "prepare": "echo 'Prepare script executed' && exit 0"
+    },
+    "keywords": [
+      "uni-vqr",
+      "qr-code",
+      "utilities"
+    ],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+      "mocha": "^10.0.0"
+    }
+  }
