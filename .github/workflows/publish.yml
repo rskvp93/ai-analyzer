@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*' # Trigger only on tags starting with 'v'
+  workflow_dispatch:
 
 jobs:
   publish:
